@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Event-Registration_form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>Event Registration Form</h1>
+        </div>
+        <div class="sub-heading">
+            <h2>Fill the form to register for the event</h2>
+            <p>Welcome to Our Youth Empowerment Conference Event. If you would like to take part in our event, please fillin your details in the form below and you will be automatically registered.Event registration must be completed at least 3 days prior to the event.This Event is happninig on date of Janaury 20th 2025 at kathmandu mall,Lalitpur.</p>
+        </div>
+        <form action="submit-form.php" method="post">
+            <div class="form-container">
+                <div class="form-groups">
+                    <label for="firstName">Name</label>
+                    <div class="input">
+                        <input type="text" id="firstName" name="firstName" placeholder="First name" required>
+                        <input type="text" id="lastName" name="lastName" placeholder="Last name" required>
+                    </div>
+                </div>
+            
+                <div class="form-group">
+                    <div class="a">
+                        <label for="email" class="required">Email</label>
+                        <input type="email" id="email" name="email" placeholder="john.doe@gmail.com" required>
+                    </div>
+                    <div class="b">
+                        <label for="phone" class="required">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(+01) 771 123 123" required>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Occupation/Profession: -->
+            <label for="occupation">Occupation/Profession:</label>
+            <input type="text" id="occupation" name="occupation" placeholder="Write down what's your occupation or profession" required>
+            
+            <!-- Age group -->
+            <label for="age-group">Age Group</label>
+            <select id="age-group" name="age-group">
+                <option value="" disabled selected>Select your age group</option>
+                <option value="under-18">Under 18</option>
+                <option value="18-25">18-25</option>
+                <option value="26-35">26-35</option>
+                <option value="36-50">36-50</option>
+                <option value="50+">50+</option>
+            </select>
+            
+            <!-- Participants -->
+            <label for="participants">How many will you bring to the event?</label>
+            <select id="participants" name="participants" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="1-3">1-3</option>
+                <option value="4-6">4-6</option>
+                <option value="7 and more">7 and more</option>
+            </select>
+            
+            <!-- Attended before -->
+            <label for="attended-before">Have you attended this event before?</label>
+            <select id="attended-before" name="attended-before" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            
+            <!-- Event source -->
+            <label for="event-source">How did you hear about this event?</label>
+            <select id="event-source" name="event-source" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="social-media">Social Media</option>
+                <option value="Friend or Family">Friend or Family</option>
+                <option value="Email Invitation">Email Invitation</option>
+                <option value="Advertisement">Advertisement</option>
+                <option value="Event website">Event Website</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <!-- Meal preference -->
+            <label for="meal">Meal Preference:</label>
+            <select id="meal" name="meal" required>
+                <option value="" disabled selected>Select your preference</option>
+                <option value="Vegetarian">Vegetarian</option>
+                <option value="Non-Vegetarian">Non-Vegetarian</option>
+            </select>
+            
+            <!-- Feedback -->
+            <label for="comments">Any suggestion or Feedback</label>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+            
+            <!-- Terms and conditions -->
+            <div class="terms">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the terms and conditions.</label>
+            </div>
+        
+            <button type="submit">Submit</button>
+        </form>
+        
+    </div>
+</body>
+</html>
